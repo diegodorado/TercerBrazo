@@ -1481,21 +1481,17 @@ void YM2612::write(uint8_t a,uint8_t v) {
 	//return F2612->OPN.ST.irq;
 }
 
+void YM2612::setTl(uint8_t channel, uint8_t slot, uint8_t value)
+{
+	set_tl(&CH[channel], &CH[channel].SLOT[SLOT1], value);
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-/*
+	/*
 
 static inline void FM_STATUS_SET(FM_ST *ST, int flag)
 static inline void FM_STATUS_RESET(FM_ST *ST, int flag)

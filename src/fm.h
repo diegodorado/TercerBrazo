@@ -163,6 +163,7 @@ class YM2612 {
 		void reset();
 		void step();
 		void write(uint8_t a,uint8_t v);
+		void setTl(uint8_t channel, uint8_t slot, uint8_t value);
 };
 
 
