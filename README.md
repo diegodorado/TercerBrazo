@@ -1,13 +1,6 @@
 
-# VCV Template plugin
+# Tercer Brazo plugins
 
-The VCV Template plugin is a starting point for developing your own plugins for VCV Rack.
-It implements a simple sine VCO, demonstrating inputs, outputs, parameters, and other concepts.
+This repository contains VCV Rack plugins developed by Tercer Brazo Estudio Taller.
 
-See https://vcvrack.com/manual/PluginDevelopmentTutorial.html for a development tutorial.
-
-## Contributing
-
-I welcome Issues and Pull Requests to this repository if you have suggestions for improvement.
-
-This template is released into the public domain ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)).
+The first plugin we launch is CV2612, an eurorack module that emulates the sounds of YM2612.
