@@ -9,11 +9,11 @@
   "authorUrl": "https://diegodorado.com",
   "pluginUrl": "",
   "manualUrl": "",
-  "sourceUrl": "",
+  "sourceUrl": "https://github.com/diegodorado/TercerBrazo",
   "donateUrl": "",
   "modules": [
     {
-      "slug": "CV2612",
+      "slug": "TercerBrazo-CV2612",
       "name": "CV2612",
       "description": "Sega Genesis chip based synth",
       "tags": [
