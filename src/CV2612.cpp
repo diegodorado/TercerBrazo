@@ -423,4 +423,4 @@ struct CV2612Widget : ModuleWidget {
 };
 
 
-Model *modelCV2612 = createModel<CV2612, CV2612Widget>("CV2612");
+Model *modelCV2612 = createModel<CV2612, CV2612Widget>("TercerBrazo-CV2612");
