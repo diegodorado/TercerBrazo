@@ -47,17 +47,16 @@ struct CV2612 : Module {
 		SL1_PARAM,
 		SL2_PARAM,
 		SL3_PARAM,
-		AL_PARAM,
 		D20_PARAM,
 		D21_PARAM,
 		D22_PARAM,
 		D23_PARAM,
-		FB_PARAM,
+		AL_PARAM,
 		RR0_PARAM,
 		RR1_PARAM,
 		RR2_PARAM,
 		RR3_PARAM,
-		ST_PARAM,
+		FB_PARAM,
 		TL0_PARAM,
 		TL1_PARAM,
 		TL2_PARAM,
@@ -85,11 +84,11 @@ struct CV2612 : Module {
 	};
 	enum InputIds {
 		PITCH_INPUT,
+		GATE_INPUT,
 		AR0_INPUT,
 		AR1_INPUT,
 		AR2_INPUT,
 		AR3_INPUT,
-		GATE_INPUT,
 		D10_INPUT,
 		D11_INPUT,
 		D12_INPUT,
@@ -98,17 +97,16 @@ struct CV2612 : Module {
 		SL1_INPUT,
 		SL2_INPUT,
 		SL3_INPUT,
-		AL_INPUT,
 		D20_INPUT,
 		D21_INPUT,
 		D22_INPUT,
 		D23_INPUT,
-		FB_INPUT,
+		AL_INPUT,
 		RR0_INPUT,
 		RR1_INPUT,
 		RR2_INPUT,
 		RR3_INPUT,
-		ST_INPUT,
+		FB_INPUT,
 		TL0_INPUT,
 		TL1_INPUT,
 		TL2_INPUT,
@@ -150,12 +148,13 @@ struct CV2612 : Module {
 	};
 
 
+	uint8_t	algorithm = 7;
+
 	//cache
 
 	uint8_t LFO;
 	uint8_t	AL[6];
 	uint8_t FB[6];
-	uint8_t ST[6];
 	uint8_t AMS[6];
 	uint8_t FMS[6];
 
@@ -203,7 +202,6 @@ struct CV2612 : Module {
 		configParam(RR1_PARAM, 0.f, 15.f, 15.f, "Operator 2 release rate");
 		configParam(RR2_PARAM, 0.f, 15.f, 15.f, "Operator 3 release rate");
 		configParam(RR3_PARAM, 0.f, 15.f, 15.f, "Operator 4 release rate");
-		configParam(ST_PARAM, 0.f, 3.f, 3.f, "Stereo");
 		configParam(TL0_PARAM, 0.f, 127.f, 0.f, "Operator 1 total level");
 		configParam(TL1_PARAM, 0.f, 127.f, 0.f, "Operator 2 total level");
 		configParam(TL2_PARAM, 0.f, 127.f, 0.f, "Operator 3 total level");
@@ -241,6 +239,9 @@ struct CV2612 : Module {
 
 		// Compute inputs at lower rate
 		if (cvDivider.process()) {
+			
+			// this value is used in the algorithm widget
+			algorithm = (uint8_t) params[AL_PARAM].getValue();
 
 			float lfo = params[LFO_PARAM].getValue() + (inputs[LFO_INPUT].getVoltage() / 10.0f)*7.0f;
 			lfo = clamp(lfo, 0.0f, 7.0f);
@@ -251,7 +252,6 @@ struct CV2612 : Module {
 
 			for (int c = 0; c < channels; c++) {
 
-				CH_SET(ST,c,3)
 				CH_SET(AL,c,7)
 				CH_SET(FB,c,7)
 				CH_SET(AMS,c,3)
@@ -314,10 +314,8 @@ struct CV2612 : Module {
 		//8192
 		//8168
 
-		//outputs[OUT0_OUTPUT].setVoltage( ((float)ym2612.MOL) * 0.00010172526f );
-		//outputs[OUT1_OUTPUT].setVoltage( ((float)ym2612.MOR) * 0.00010172526f );
-		outputs[OUT0_OUTPUT].setVoltage( ((float)ym2612.MOL) * 0.00014f );
-		outputs[OUT1_OUTPUT].setVoltage( ((float)ym2612.MOR) * 0.00014f );
+		outputs[OUT0_OUTPUT].setVoltage( ((float)ym2612.MOL) * 0.00010172526f );
+		outputs[OUT1_OUTPUT].setVoltage( ((float)ym2612.MOR) * 0.00010172526f );
 
 	}
 
@@ -325,8 +323,54 @@ struct CV2612 : Module {
 
 
 
+struct AlgorithmDisplay : TransparentWidget {
+	CV2612 *module;
+	std::vector<NSVGimage*> frames;
+
+	AlgorithmDisplay() {
+		for(int i = 0;i<8;i++){
+			addFrame(asset::plugin(pluginInstance, "res/alg/"+std::to_string(i)+".svg"));
+		}
+	}
+
+	void addFrame(std::string  path) {
+		NSVGimage* image;
+		// 17.5dpi means nothing... i am being lazy to rescale
+		// all my svg properly ... so i am rescaling "with dpi" =(
+		image = nsvgParseFromFile(path.c_str(), "mm", 16.5);
+		frames.push_back(image);
+	};
+
+	void draw(const DrawArgs &args) override {
+		if (module) {
+			NVGcolor backgroundColor = nvgRGB(0x38, 0x38, 0x38);
+			NVGcolor borderColor = nvgRGB(0x50, 0x9e, 0xec);
+			nvgBeginPath(args.vg);
+			nvgRoundedRect(args.vg, 0.0, 0.0, box.size.x, box.size.y, 2.0);
+			nvgFillColor(args.vg, backgroundColor);
+			nvgFill(args.vg);
+			nvgStrokeWidth(args.vg, 1.0);
+			nvgStrokeColor(args.vg, borderColor);
+			nvgStroke(args.vg);
+
+			svgDraw(args.vg,frames[module->algorithm]);
+		}
+		else {
+
+		}
+
+
+	}
+};
+
+
+
+
+
+
+
 struct CV2612Widget : ModuleWidget {
-	
+
 
 	CV2612Widget(CV2612 *module) {
 		setModule(module);
@@ -345,7 +389,6 @@ struct CV2612Widget : ModuleWidget {
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(81.657, 31.751)), module, CV2612::D11_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(101.977, 31.751)), module, CV2612::D12_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(122.297, 31.751)), module, CV2612::D13_PARAM));
-		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(26.882, 33.126)), module, CV2612::LFO_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(61.337, 41.911)), module, CV2612::SL0_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(81.657, 41.911)), module, CV2612::SL1_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(101.977, 41.911)), module, CV2612::SL2_PARAM));
@@ -364,7 +407,7 @@ struct CV2612Widget : ModuleWidget {
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(81.657, 72.391)), module, CV2612::TL1_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(101.977, 72.391)), module, CV2612::TL2_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(122.297, 72.391)), module, CV2612::TL3_PARAM));
-		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(26.882, 75.882)), module, CV2612::ST_PARAM));
+		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(26.882, 75.988)), module, CV2612::LFO_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(61.208, 83.503)), module, CV2612::MUL0_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(81.528, 83.503)), module, CV2612::MUL1_PARAM));
 		addParam(createParamCentered<CV2612Knob>(mm2px(Vec(101.848, 83.503)), module, CV2612::MUL2_PARAM));
@@ -394,7 +437,6 @@ struct CV2612Widget : ModuleWidget {
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(71.497, 31.751)), module, CV2612::D11_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(91.817, 31.751)), module, CV2612::D12_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(112.137, 31.751)), module, CV2612::D13_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(16.722, 33.126)), module, CV2612::LFO_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(51.177, 41.911)), module, CV2612::SL0_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(71.497, 41.911)), module, CV2612::SL1_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(91.817, 41.911)), module, CV2612::SL2_INPUT));
@@ -413,7 +455,7 @@ struct CV2612Widget : ModuleWidget {
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(71.497, 72.391)), module, CV2612::TL1_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(91.817, 72.391)), module, CV2612::TL2_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(112.137, 72.391)), module, CV2612::TL3_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(16.722, 75.882)), module, CV2612::ST_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(16.722, 75.988)), module, CV2612::LFO_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(51.048, 83.503)), module, CV2612::MUL0_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(71.368, 83.503)), module, CV2612::MUL1_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(91.688, 83.503)), module, CV2612::MUL2_INPUT));
@@ -443,8 +485,14 @@ struct CV2612Widget : ModuleWidget {
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(26.458, 23.283)), module, CV2612::CH4_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(31.538, 23.283)), module, CV2612::CH5_LIGHT));
 
-		// mm2px(Vec(28.073, 12.835))
-		addChild(createWidget<Widget>(mm2px(Vec(4.749, 38.014))));
+
+		{
+			AlgorithmDisplay *display = new AlgorithmDisplay();
+			display->box.pos = mm2px(Vec(4.749, 29.698));
+			display->box.size = mm2px(Vec(28.073, 17)); //height was 21.15
+			display->module = module;
+			addChild(display);
+		}
 
 
 

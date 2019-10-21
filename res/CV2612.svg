@@ -34,10 +34,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="294.4071"
+     inkscape:cx="-32.735754"
      inkscape:cy="213.76943"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1254"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="mm"
      inkscape:snap-bbox="true"
@@ -97,8 +97,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-168.49998)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
        style="display:inline;opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.35174739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="rect420"
@@ -172,8 +171,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="components"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <circle
        cy="72.3908"
        cx="51.177029"
@@ -770,12 +768,12 @@
        cy="62.230789"
        r="2.8" />
     <rect
-       style="opacity:0.98999999;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.73882818;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:0.98999999;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.94843322;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect958"
        width="28.073463"
-       height="12.834823"
+       height="21.150299"
        x="4.7486992"
-       y="38.013676"
+       y="29.6982"
        inkscape:label="alg" />
     <circle
        r="2.8"
@@ -799,15 +797,8 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        inkscape:label="fb" />
     <circle
-       inkscape:label="st"
-       style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       id="circle1389"
-       cx="16.721575"
-       cy="75.882492"
-       r="2.8" />
-    <circle
        r="2.8"
-       cy="33.125786"
+       cy="75.988327"
        cx="16.721575"
        id="circle1391"
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -841,18 +832,11 @@
        cy="66.251663"
        r="2.8" />
     <circle
-       r="2.8"
-       cy="75.882492"
-       cx="26.881662"
-       id="circle1401"
-       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       inkscape:label="st" />
-    <circle
        inkscape:label="lfo"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="circle1403"
        cx="26.881662"
-       cy="33.125786"
+       cy="75.988327"
        r="2.8" />
     <circle
        r="2.8"
@@ -901,7 +885,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="text"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -961,12 +946,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="5.1396413"
-       y="34.098045"
+       y="76.960587"
        id="text1263"><tspan
          sodipodi:role="line"
          id="tspan1261"
          x="5.1396413"
-         y="34.098045"
+         y="76.960587"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px">lfo</tspan></text>
     <text
        xml:space="preserve"
@@ -1099,17 +1084,6 @@
          x="22.475136"
          y="19.337843"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px">gate</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="8.244278"
-       y="76.77327"
-       id="text1409"><tspan
-         sodipodi:role="line"
-         x="8.244278"
-         y="76.77327"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="tspan1411">st</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1266,19 +1240,23 @@
     <g
        aria-label="lfo"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="text1175">
+       id="text1175"
+       transform="translate(0,42.862521)">
       <path
-         d="M 6.3743635,31.896712 H 5.746419 c -0.088194,0 -0.1199444,0.0035 -0.1516944,0.02469 -0.052917,0.03175 -0.084667,0.08819 -0.084667,0.151694 0,0.05644 0.024695,0.109361 0.074083,0.141111 0.03175,0.02822 0.074083,0.03528 0.1622777,0.03528 h 0.2751667 v 1.495778 H 5.5911968 c -0.091722,0 -0.1164166,0.0035 -0.1481666,0.02469 -0.052917,0.03175 -0.084667,0.09172 -0.084667,0.151694 0,0.05292 0.028222,0.109362 0.074083,0.141112 0.028222,0.02469 0.077611,0.03528 0.15875,0.03528 h 1.2135555 c 0.070556,0 0.1234723,-0.01058 0.1481667,-0.02469 0.052917,-0.03528 0.084667,-0.09172 0.084667,-0.151695 0,-0.05644 -0.028222,-0.109361 -0.074083,-0.144638 -0.035278,-0.0247 -0.0635,-0.03175 -0.15875,-0.03175 H 6.3743635 Z"
+         d="M 6.3743635,31.896712 H 5.746419 c -0.088194,0 -0.1199444,0.0035 -0.1516944,0.02469 -0.052917,0.03175 -0.084667,0.08819 -0.084667,0.151694 0,0.05644 0.024695,0.109361 0.074083,0.141111 0.03175,0.02822 0.074083,0.03528 0.1622777,0.03528 H 6.021585 v 1.495778 H 5.5911968 c -0.091722,0 -0.1164166,0.0035 -0.1481666,0.02469 -0.052917,0.03175 -0.084667,0.09172 -0.084667,0.151694 0,0.05292 0.028222,0.109362 0.074083,0.141112 0.028222,0.02469 0.077611,0.03528 0.15875,0.03528 h 1.2135555 c 0.070556,0 0.1234723,-0.01058 0.1481667,-0.02469 0.052917,-0.03528 0.084667,-0.09172 0.084667,-0.151695 0,-0.05644 -0.028222,-0.109361 -0.074083,-0.144638 -0.035278,-0.0247 -0.0635,-0.03175 -0.15875,-0.03175 H 6.3743635 Z"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="path1385" />
+         id="path1385"
+         inkscape:connector-curvature="0" />
       <path
          d="m 8.3097353,32.909184 h 0.5326944 c 0.077611,0 0.1199445,-0.0071 0.1481667,-0.02469 0.052917,-0.03528 0.084667,-0.09172 0.084667,-0.151695 0,-0.05644 -0.028222,-0.109361 -0.074083,-0.144638 -0.035278,-0.0247 -0.0635,-0.03175 -0.15875,-0.03175 H 8.3097353 v -0.130528 c 0,-0.116417 0.09525,-0.172861 0.2963333,-0.172861 0.1093611,0 0.2786945,0.01764 0.3986389,0.03881 0.042333,0.0071 0.077611,0.01058 0.098778,0.01058 0.091722,0 0.1658055,-0.07761 0.1658055,-0.179917 0,-0.08114 -0.052917,-0.141111 -0.1481666,-0.165806 -0.1128889,-0.03175 -0.3351389,-0.05644 -0.4833056,-0.05644 -0.4198055,0 -0.6808611,0.201083 -0.6808611,0.525639 v 0.130528 H 7.7946798 c -0.09525,0 -0.1199445,0.0035 -0.1516945,0.02469 -0.052917,0.03175 -0.084667,0.09172 -0.084667,0.151694 0,0.05644 0.028222,0.109361 0.074083,0.141111 0.03175,0.02822 0.074083,0.03528 0.15875,0.03528 h 0.1658055 v 0.836084 H 7.7523464 c -0.091722,0 -0.1164166,0.0035 -0.1481666,0.02469 -0.052917,0.03175 -0.084667,0.09172 -0.084667,0.151694 0,0.05292 0.028222,0.109362 0.070556,0.141112 0.03175,0.02469 0.081139,0.03528 0.1622777,0.03528 h 1.04775 c 0.070556,0 0.1234722,-0.01058 0.1481667,-0.02469 0.052917,-0.03528 0.084667,-0.09172 0.084667,-0.151695 0,-0.05644 -0.028222,-0.109361 -0.070556,-0.144638 -0.035278,-0.0247 -0.067028,-0.03175 -0.1622778,-0.03175 H 8.3097353 Z"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="path1387" />
+         id="path1387"
+         inkscape:connector-curvature="0" />
       <path
          d="m 10.439135,32.510545 c -0.5221112,0 -0.9207501,0.356306 -0.9207501,0.821973 0,0.458611 0.4021667,0.821972 0.9101671,0.821972 0.508,0 0.910166,-0.363361 0.910166,-0.821972 0,-0.455084 -0.402166,-0.821973 -0.899583,-0.821973 z m -0.0035,0.352778 c 0.306917,0 0.550333,0.208139 0.550333,0.469195 0,0.264583 -0.243416,0.469194 -0.557388,0.469194 -0.313973,0 -0.5573893,-0.204611 -0.5573893,-0.469194 0,-0.268112 0.2434163,-0.469195 0.5644443,-0.469195 z"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="path1389" />
+         id="path1389"
+         inkscape:connector-curvature="0" />
     </g>
     <g
        aria-label="ar"
@@ -1463,19 +1441,6 @@
          d="m 30.761279,18.731065 v -0.137583 c 0,-0.486833 -0.388056,-0.843139 -0.913695,-0.843139 -0.515055,0 -0.910166,0.359833 -0.910166,0.8255 0,0.479778 0.384527,0.818444 0.931333,0.818444 0.250472,0 0.610306,-0.0635 0.769056,-0.134055 0.08467,-0.03881 0.123472,-0.08819 0.123472,-0.15875 0,-0.09878 -0.07408,-0.176389 -0.169334,-0.176389 -0.03175,0 -0.07408,0.0071 -0.116416,0.01764 -0.324556,0.08467 -0.41275,0.09878 -0.575028,0.09878 -0.310444,0 -0.497417,-0.09878 -0.578556,-0.310445 z m -1.42875,-0.310444 c 0.05292,-0.1905 0.261055,-0.3175 0.518583,-0.3175 0.257528,0 0.462139,0.123472 0.518583,0.3175 z"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="path1317" />
-    </g>
-    <g
-       aria-label="st"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:125%;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="text1227">
-      <path
-         d="m 9.687139,75.672603 c 0.042333,0.07761 0.091722,0.109361 0.1658056,0.109361 0.052917,0 0.1093611,-0.02822 0.1446389,-0.07055 0.024695,-0.03528 0.03175,-0.07056 0.03175,-0.162278 v -0.130528 c 0,-0.162278 -0.052916,-0.232833 -0.1658051,-0.232833 -0.052917,0 -0.084667,0.02469 -0.1128889,0.09172 -0.1375833,-0.0635 -0.2822222,-0.09172 -0.4550833,-0.09172 -0.4233333,0 -0.7267222,0.201083 -0.7267222,0.483305 0,0.278695 0.2081389,0.419806 0.7020278,0.472722 0.1905,0.02117 0.2645833,0.03528 0.3245555,0.05997 0.074083,0.02822 0.1199444,0.07761 0.1199444,0.123472 0,0.08114 -0.1869722,0.151694 -0.4127499,0.151694 -0.1905,0 -0.3386667,-0.04586 -0.4409723,-0.137583 -0.03175,-0.105833 -0.088194,-0.155222 -0.1799166,-0.155222 -0.059972,0 -0.1093611,0.02469 -0.1446389,0.07408 -0.028222,0.03528 -0.035278,0.06703 -0.035278,0.162278 v 0.116417 c 0,0.08467 0.00706,0.116416 0.024694,0.148166 0.035278,0.05644 0.091722,0.08467 0.1552222,0.08467 0.045861,0 0.074083,-0.01058 0.1128889,-0.04233 0.1411111,0.06703 0.3210277,0.102305 0.5221111,0.102305 0.4550833,0 0.7866946,-0.208139 0.7866946,-0.497417 0,-0.162277 -0.09172,-0.313972 -0.2469446,-0.398638 -0.1058334,-0.05997 -0.2469445,-0.09878 -0.5115278,-0.134056 -0.2257778,-0.03175 -0.2469444,-0.03528 -0.2963333,-0.05292 -0.056444,-0.02117 -0.091722,-0.05292 -0.091722,-0.08467 0,-0.0635 0.1693334,-0.123473 0.34925,-0.123473 0.1481667,0 0.2645834,0.03175 0.3633611,0.102306 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="path1306" />
-      <path
-         d="m 11.114511,75.584409 h 0.638528 c 0.07761,0 0.119944,-0.0071 0.148166,-0.02469 0.05292,-0.03175 0.08467,-0.09172 0.08467,-0.151694 0,-0.05644 -0.02822,-0.109361 -0.07056,-0.144639 -0.0388,-0.02469 -0.06703,-0.03175 -0.162277,-0.03175 h -0.638528 v -0.310445 c 0,-0.09172 -0.0035,-0.116416 -0.02469,-0.148166 -0.03175,-0.05292 -0.09172,-0.08467 -0.151694,-0.08467 -0.05644,0 -0.109361,0.02822 -0.141111,0.07056 -0.02822,0.03528 -0.03528,0.07055 -0.03528,0.162277 v 0.310445 h -0.123472 c -0.09172,0 -0.116417,0.0035 -0.148167,0.02469 -0.05292,0.03175 -0.08467,0.09172 -0.08467,0.151695 0,0.05292 0.02822,0.109361 0.07055,0.141111 0.03528,0.02822 0.07408,0.03528 0.162278,0.03528 h 0.123472 v 0.758472 c 0,0.299861 0.250472,0.486833 0.652639,0.486833 0.183444,0 0.462139,-0.05997 0.635,-0.141111 0.134056,-0.05997 0.176389,-0.105833 0.176389,-0.1905 0,-0.09878 -0.07408,-0.179917 -0.169333,-0.179917 -0.03881,0 -0.0635,0.0071 -0.123473,0.03881 -0.15875,0.08114 -0.328083,0.119944 -0.515055,0.119944 -0.134056,0 -0.232834,-0.02469 -0.275167,-0.07055 -0.02117,-0.02469 -0.02822,-0.05644 -0.02822,-0.130528 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;font-family:'Nimbus Mono L';-inkscape-font-specification:'Nimbus Mono L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
-         id="path1308" />
     </g>
     <g
        aria-label="CV2612"
