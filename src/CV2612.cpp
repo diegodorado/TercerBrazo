@@ -214,24 +214,19 @@ struct AlgorithmDisplay : TransparentWidget {
 	};
 
 	void draw(const DrawArgs &args) override {
-		if (module) {
-			NVGcolor backgroundColor = nvgRGB(0x38, 0x38, 0x38);
-			NVGcolor borderColor = nvgRGB(0x50, 0x9e, 0xec);
-			nvgBeginPath(args.vg);
-			nvgRoundedRect(args.vg, 0.0, 0.0, box.size.x, box.size.y, 2.0);
-			nvgFillColor(args.vg, backgroundColor);
-			nvgFill(args.vg);
-			nvgStrokeWidth(args.vg, 1.0);
-			nvgStrokeColor(args.vg, borderColor);
-			nvgStroke(args.vg);
+		uint8_t algorithm = (module) ? module->algorithm : 7;
 
-			svgDraw(args.vg,frames[module->algorithm]);
-		}
-		else {
+		NVGcolor backgroundColor = nvgRGB(0x38, 0x38, 0x38);
+		NVGcolor borderColor = nvgRGB(0x50, 0x9e, 0xec);
+		nvgBeginPath(args.vg);
+		nvgRoundedRect(args.vg, 0.0, 0.0, box.size.x, box.size.y, 2.0);
+		nvgFillColor(args.vg, backgroundColor);
+		nvgFill(args.vg);
+		nvgStrokeWidth(args.vg, 1.0);
+		nvgStrokeColor(args.vg, borderColor);
+		nvgStroke(args.vg);
 
-		}
-
-
+		svgDraw(args.vg,frames[algorithm]);
 	}
 };
 
