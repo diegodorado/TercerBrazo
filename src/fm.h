@@ -160,8 +160,26 @@ struct FM_OPN
 
 
 
+struct Operator {
+	uint8_t	AR;
+	uint8_t D1;
+	uint8_t SL;
+	uint8_t D2;
+	uint8_t RR;
+	uint8_t TL;
+	uint8_t MUL;
+	uint8_t DET;
+	uint8_t RS;
+	uint8_t AM;
+};
 
-
+struct Channel {
+	uint8_t	AL;
+	uint8_t FB;
+	uint8_t AMS;
+	uint8_t FMS;
+	Operator operators[4];
+};
 
 
 
@@ -179,6 +197,12 @@ class YM2612 {
 	public:
 		int16_t MOL;  // master output left
 		int16_t MOR;  // master output right
+
+
+		Channel channels[6];
+		uint8_t LFO;
+
+
 		YM2612();
 		void reset();
 		void step();
