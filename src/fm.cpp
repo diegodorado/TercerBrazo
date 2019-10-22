@@ -1686,6 +1686,6 @@ void YM2612::setAM(uint8_t channel, uint8_t slot, uint8_t value){
 	channels[channel].operators[slot].AM = value;
 
 	FM_SLOT *s = &CH[channel].SLOT[slots_idx[slot]];
-	s->dr = (s->dr&0x1F)|((value&0x01)<<7);
-  set_dr(s, s->dr);
+
+  	s->AMmask = (value) ? ~0 : 0;
 }
